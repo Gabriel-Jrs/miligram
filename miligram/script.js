@@ -1,6 +1,14 @@
-// Simula o envio do formulário e exibe uma mensagem
-document.getElementById("contato").addEventListener("submit", function (e) {
-  e.preventDefault();
-  document.getElementById("mensagem-enviada").classList.remove("hidden");
-  this.reset();
+document.addEventListener("DOMContentLoaded", () => {
+  const formContato = document.querySelector(".form-contato");
+  const mensagemEnviada = document.querySelector(".mensagem-enviada");
+
+  if (formContato && mensagemEnviada) {
+    formContato.addEventListener("submit", (event) => {
+      event.preventDefault();
+      mensagemEnviada.classList.remove("hidden");
+      mensagemEnviada.textContent = "Mensagem enviada com sucesso! Entraremos em contato em breve.";
+      formContato.reset();
+    });
+  }
 });
+
