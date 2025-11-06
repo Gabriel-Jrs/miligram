@@ -20,7 +20,9 @@ body {
   line-height: 1.6;
   background-color: #f5f7fa;
 }
-
+#titulo{
+  font-size: 40px;
+}
 /* Tipografia */
 h1,
 h2,
